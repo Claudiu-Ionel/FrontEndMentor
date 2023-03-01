@@ -1,0 +1,24 @@
+@use '_colors' as *;
+
+*, *::after,*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.light {
+  .text {
+    color: $text-light-primary;
+  }
+  .background {
+    background-color: $background-light;
+  }
+}
+.dark {
+  .text {
+    color: $text-dark-primary;
+  }
+  .background {
+    background-color: $background-dark;
+  }
+}
