@@ -1,0 +1,131 @@
+@use 'base';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+}
+
+body {
+  background-color: base.$very-dark-blue;
+  width: 100vw;
+  height: 100vh;
+  font-family: 'Overpass', sans-serif;
+  @include base.flex-container(row, center, center, wrap);
+  padding: 25px;
+  font-size: 12px;
+}
+.display-none {
+  display: none;
+}
+.align-center {
+  align-items: center;
+  text-align: center
+}
+.rating-component-wrapper {
+  @include base.flex-container(column, space-between, space-between, wrap);
+  width: 100%;
+  max-width: 412px;
+  height: 360px; //no-scope
+  background: base.$black-gradient;
+  color: base.$pure-white;
+  padding: 25px;
+  border-radius: 20px;
+
+  .image-wrapper {
+    @include base.flex-container(row, center, center, wrap);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background: base.$dark-blue;
+    margin-bottom: 15px;
+    &.submit-phase {
+      width: 144px;
+        height: 96px;
+    }
+  }
+  .main-header {
+    font-size: 2em;
+    margin-bottom: 5px;
+  }
+  .info {
+    color: base.$light-grey;
+    line-height: 22px;
+    font-size: 15px;
+    
+  }
+  .rating-buttons {
+    border: none;
+    @include base.flex-container(row, space-between, center, wrap);
+    width: 100%;
+    padding: 20px 0px;
+    &.display-none {
+      display: none;
+    }
+    .radio-wrapper {
+      width: 42px;
+      height: 42px;
+      input[type="radio"] {
+        position: relative;
+        appearance: none;
+        width: 100%;
+        height: 100%;
+        background-color: base.$dark-blue;
+        border-radius: 50%;
+        cursor: pointer;
+        &:hover {
+          background-color: base.$medium-gray;
+          &:before {
+            color: base.$pure-white;
+          }
+        }
+        &:before {
+          content: attr(data-index);
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          color: base.$medium-gray;
+        }
+        &:checked {
+          background-color: base.$orange;
+          &:before {
+              color: base.$pure-white;
+            }
+        }
+      }
+    }
+  }
+
+    .submit-button {
+      width: 100%;
+      height: 45px;
+      justify-self: center;
+      align-items: center;
+      border: none;
+      border-radius: 30px;
+      background-color: base.$orange;
+      color: base.$pure-white;
+      cursor: pointer;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+
+      &:hover {
+        background-color: base.$pure-white;
+        color: base.$orange;
+      }
+    }
+    .user-rating {
+      @include base.flex-container(row, center, center, wrap);
+      color: base.$orange;
+      font-size: 14px;
+      border-radius: 20px;
+      background-color: base.$dark-blue;
+      padding: 10px 15px; 
+      width: fit-content;
+      &.display-none {
+        display: none
+      }
+    }
+}

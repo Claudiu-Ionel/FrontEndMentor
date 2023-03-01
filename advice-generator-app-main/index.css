@@ -1,0 +1,89 @@
+*, *::after, *::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: hsl(218, 23%, 16%);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  font-family: "Manrope", sans-serif;
+  padding: 15px;
+}
+
+.quote-wrapper {
+  margin-bottom: 40px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: nowrap;
+  width: 100%;
+  max-width: 540px;
+  height: 332px;
+  background-color: hsl(217, 19%, 24%);
+  padding: 30px;
+  border-radius: 10px;
+  position: relative;
+}
+.quote-wrapper .pattern-divider {
+  max-width: 100%;
+  height: 17px;
+}
+.quote-wrapper .quote-title {
+  text-align: center;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: hsl(150, 100%, 66%);
+  letter-spacing: 4px;
+  font-weight: 800;
+}
+.quote-wrapper .quote-title .advice-id {
+  color: inherit;
+  font-size: inherit;
+  letter-spacing: inherit;
+}
+.quote-wrapper .quote-content {
+  text-align: center;
+  max-width: 98%;
+  min-height: 100px;
+  font-size: 24px;
+  color: hsl(193, 38%, 86%);
+}
+.quote-wrapper .random-quote-button {
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  appearance: none;
+  border: none;
+  border-radius: 50%;
+  padding: 16px;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: hsl(150, 100%, 66%);
+  transition: all 200ms;
+}
+.quote-wrapper .random-quote-button:hover {
+  box-shadow: 0px 0px 35px -5px hsl(150, 100%, 66%);
+}
+.quote-wrapper .random-quote-button:disabled {
+  background-color: hsl(0, 100%, 60%);
+  cursor: not-allowed;
+}
+.quote-wrapper .random-quote-button:disabled:hover {
+  box-shadow: none;
+}
+
+/*# sourceMappingURL=index.css.map */

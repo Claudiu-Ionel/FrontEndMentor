@@ -1,0 +1,271 @@
+*, *::after, *::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  justify-content: none;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 14px;
+  width: 100%;
+  height: 100%;
+}
+@media only screen and (max-width: 400px) {
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+}
+main .cards-section {
+  width: 30%;
+  height: 100%;
+  background: url("../images/bg-main-desktop.png") no-repeat center/cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+@media only screen and (max-width: 400px) {
+  main .cards-section {
+    width: 100%;
+    height: 40%;
+    background: url("../images/bg-main-mobile.png") no-repeat center/cover;
+  }
+}
+main .cards-section .cards-wrapper {
+  width: fit-content;
+  height: fit-content;
+  margin-left: 60%;
+}
+@media only screen and (max-width: 400px) {
+  main .cards-section .cards-wrapper {
+    margin: 30% 0px 0px 0px;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+}
+main .cards-section .cards-wrapper .card-front, main .cards-section .cards-wrapper .card-back {
+  color: hsl(0, 0%, 100%);
+  width: 447px;
+  height: 245px;
+  padding: 25px 30px;
+  background: url("../images/bg-card-front.png") no-repeat center/cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+}
+@media only screen and (max-width: 400px) {
+  main .cards-section .cards-wrapper .card-front, main .cards-section .cards-wrapper .card-back {
+    width: 286px;
+    height: 157px;
+    padding: 20px;
+    z-index: 2;
+    margin-top: -60px;
+    margin-left: -50px;
+  }
+  main .cards-section .cards-wrapper .card-front .card-logo img, main .cards-section .cards-wrapper .card-back .card-logo img {
+    width: 65%;
+  }
+}
+main .cards-section .cards-wrapper .card-front .card-data, main .cards-section .cards-wrapper .card-back .card-data {
+  width: 100%;
+}
+main .cards-section .cards-wrapper .card-front .card-number, main .cards-section .cards-wrapper .card-back .card-number {
+  font-size: 2em;
+  font-weight: 500;
+  letter-spacing: 3.5px;
+  margin-bottom: 20px;
+}
+@media only screen and (max-width: 400px) {
+  main .cards-section .cards-wrapper .card-front .card-number, main .cards-section .cards-wrapper .card-back .card-number {
+    font-size: 1.1em;
+  }
+}
+main .cards-section .cards-wrapper .card-front .card-owner-date, main .cards-section .cards-wrapper .card-back .card-owner-date {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+}
+@media only screen and (max-width: 400px) {
+  main .cards-section .cards-wrapper .card-front .card-owner-date, main .cards-section .cards-wrapper .card-back .card-owner-date {
+    font-size: 0.8em;
+  }
+}
+main .cards-section .cards-wrapper .card-front .card-owner-date .card-owner, main .cards-section .cards-wrapper .card-back .card-owner-date .card-owner {
+  font-size: 1em;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+main .cards-section .cards-wrapper .card-back {
+  background-image: url("../images/bg-card-back.png");
+  margin: 30px 0px 0px 20%;
+  align-items: flex-end;
+  padding: 50px;
+  justify-content: center;
+  z-index: 1;
+}
+main .cards-section .cards-wrapper .card-back .card-cvc {
+  letter-spacing: 2px;
+}
+main .form-section-wrapper {
+  width: 70%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+@media only screen and (max-width: 400px) {
+  main .form-section-wrapper {
+    width: 100%;
+    height: fit-content;
+    margin-top: 110px;
+    padding: 0px 20px;
+  }
+  main .form-section-wrapper #card-data-form {
+    width: 100%;
+  }
+}
+main .form-section-wrapper .input-wrapper {
+  position: relative;
+  width: 100%;
+  margin-bottom: 12px;
+}
+main .form-section-wrapper .input-wrapper .input-error {
+  position: absolute;
+  bottom: -15px;
+  left: 5px;
+  display: block;
+  height: 12px;
+  margin-top: 3px;
+  color: hsl(0, 100%, 66%);
+}
+main .form-section-wrapper .input-wrapper #year-error {
+  left: 53%;
+}
+main .form-section-wrapper .submit-button {
+  width: 100%;
+  border-radius: 10px;
+  border: none;
+  padding: 15px;
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(278, 68%, 11%);
+  cursor: pointer;
+  font-size: 18px;
+  margin-top: 10px;
+}
+main .form-section-wrapper .submit-button:hover {
+  background-color: hsl(278, 68%, 16%);
+}
+main .form-section-wrapper form, main .form-section-wrapper .submit-message-wrapper {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+main .form-section-wrapper form label, main .form-section-wrapper .submit-message-wrapper label {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+main .form-section-wrapper form input, main .form-section-wrapper .submit-message-wrapper input {
+  position: relative;
+  width: 100%;
+  padding: 12px 15px;
+  border-radius: 10px;
+  border: 1px solid hsl(270, 3%, 87%);
+  font-size: 18px;
+  margin-top: 10px;
+}
+main .form-section-wrapper form input::placeholder, main .form-section-wrapper .submit-message-wrapper input::placeholder {
+  color: hsl(270, 3%, 87%);
+}
+main .form-section-wrapper form input:focus-visible, main .form-section-wrapper .submit-message-wrapper input:focus-visible {
+  border: double 1px transparent;
+  border-radius: 10px;
+  background-image: linear-gradient(white, white), linear-gradient(#6448fe, #600594);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  border-image-slice: 1;
+  outline: none;
+}
+main .form-section-wrapper form input[error-format=true]:focus-visible, main .form-section-wrapper .submit-message-wrapper input[error-format=true]:focus-visible {
+  outline: 1px solid hsl(0, 100%, 66%);
+  background-image: linear-gradient(white, white);
+}
+main .form-section-wrapper form .date-cvc-wrapper, main .form-section-wrapper .submit-message-wrapper .date-cvc-wrapper {
+  width: 100%;
+  gap: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+main .form-section-wrapper form .date-cvc-wrapper .date, main .form-section-wrapper .submit-message-wrapper .date-cvc-wrapper .date, main .form-section-wrapper form .date-cvc-wrapper .cvc, main .form-section-wrapper .submit-message-wrapper .date-cvc-wrapper .cvc {
+  width: 50%;
+}
+main .form-section-wrapper form .date-cvc-wrapper .date label, main .form-section-wrapper .submit-message-wrapper .date-cvc-wrapper .date label, main .form-section-wrapper form .date-cvc-wrapper .cvc label, main .form-section-wrapper .submit-message-wrapper .date-cvc-wrapper .cvc label {
+  display: block;
+}
+main .form-section-wrapper form .date-cvc-wrapper .date input, main .form-section-wrapper .submit-message-wrapper .date-cvc-wrapper .date input, main .form-section-wrapper form .date-cvc-wrapper .cvc input, main .form-section-wrapper .submit-message-wrapper .date-cvc-wrapper .cvc input {
+  display: inline-block;
+  width: 45%;
+}
+main .form-section-wrapper form .date-cvc-wrapper .date #input-month, main .form-section-wrapper .submit-message-wrapper .date-cvc-wrapper .date #input-month, main .form-section-wrapper form .date-cvc-wrapper .cvc #input-month, main .form-section-wrapper .submit-message-wrapper .date-cvc-wrapper .cvc #input-month {
+  margin-right: 5px;
+}
+main .form-section-wrapper form .date-cvc-wrapper .cvc input, main .form-section-wrapper .submit-message-wrapper .date-cvc-wrapper .cvc input {
+  width: 100%;
+}
+main .form-section-wrapper .submit-message-wrapper {
+  display: none;
+}
+@media only screen and (max-width: 400px) {
+  main .form-section-wrapper .submit-message-wrapper {
+    width: 100%;
+    padding-bottom: 120 px;
+  }
+}
+main .form-section-wrapper .submit-message-wrapper .submit-message {
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 400;
+}
+main .form-section-wrapper .submit-message-wrapper .submit-paragraph {
+  font-size: 18px;
+  color: hsl(279, 6%, 55%);
+}
+
+/*# sourceMappingURL=index.css.map */

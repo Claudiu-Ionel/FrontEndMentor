@@ -1,0 +1,31 @@
+$active-input-border: #6448fe, #600594;
+$input-errors: hsl(0, 100%, 66%);
+$white: hsl(0, 0%, 100%);
+$light-grayish-violet: hsl(270, 3%, 87%);
+$dark-grayish-violet: hsl(279, 6%, 55%);
+$very-dark-violet: hsl(278, 68%, 11%);
+$very-dark-violet-hover: hsl(278, 68%, 16%);
+$light-gray: 	hsl(270, 3%, 87%);
+$font-family:'Space Grotesk', sans-serif;
+$font-weight: 500;
+$font-size: 18px;
+$bg-card-front: "../images/bg-card-front.png";
+$bg-card-back: "../images/bg-card-back.png";
+$bg-main-desktop: "../images/bg-main-desktop.png";
+$bg-main-mobile: "../images/bg-main-mobile.png";
+
+@mixin flex-container($direction, $jContent, $aItems, $wrap) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $jContent;
+  align-items: $aItems;
+  flex-wrap: $wrap
+}
+
+@mixin responsive($breakpoint) {
+  @if $breakpoint == phone {
+    @media only screen and (max-width: 400px) {
+      @content
+    }
+  }
+}

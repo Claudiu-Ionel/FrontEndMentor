@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./index.css" />
+    <title>Frontend Mentor | Interactive rating component</title>
+    <script src="./index.js" defer></script>
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Rating state start -->
+    <section class="rating-component-wrapper">
+      <div class="image-wrapper">
+        <img class="image" src="./images/icon-star.svg" alt="" />
+      </div>
+      <div class="user-rating display-none">You selected 4 out of 5</div>
+      <h1 class="main-header">How did we do?</h1>
+      <p class="info">
+        Please let us know how we did with your support request. All feedback is appreciated to help
+        us improve our offering!
+      </p>
+      <fieldset class="rating-buttons">
+        <div class="radio-wrapper">
+          <input checked data-index="1" type="radio" id="rating-1" name="drone" value="1" checked />
+        </div>
+
+        <div class="radio-wrapper">
+          <input data-index="2" type="radio" id="rating-2" name="drone" value="2" />
+        </div>
+
+        <div class="radio-wrapper">
+          <input data-index="3" type="radio" id="rating-3" name="drone" value="3" />
+        </div>
+        <div class="radio-wrapper">
+          <input data-index="4" type="radio" id="rating-4" name="drone" value="4" />
+        </div>
+        <div class="radio-wrapper">
+          <input data-index="5" type="radio" id="rating-5" name="drone" value="5" />
+        </div>
+      </fieldset>
+
+      <button type="button" class="submit-button">Submit</button>
+    </section>
+
+    <!-- Rating state end -->
+
+    <!-- Thank you state start -->
+
+    <!-- You selected -->
+    <!-- Add rating here -->
+    <!-- out of 5 Thank you! We appreciate you taking the time to give a rating. If you ever need more
+    support, don’t hesitate to get in touch! -->
+
+    <!-- Thank you state end -->
+
+    <!-- <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Your Name Here</a>.
+    </div> -->
+  </body>
+</html>

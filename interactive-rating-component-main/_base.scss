@@ -1,0 +1,16 @@
+$dark-blue: hsl(213, 19%, 18%);
+$light-grey: hsl(217, 12%, 63%);
+$medium-gray: hsl(216, 12%, 54%);
+$orange: hsl(25, 97%, 53%);
+$pure-white: hsl(0, 0%, 100%);
+$very-dark-blue: hsl(216, 12%, 8%);
+$black-gradient: radial-gradient(98.96% 98.96% at 50% 0%, #232A34 0%, #181E27 100%);
+
+
+@mixin flex-container($direction, $jContent, $aItems, $wrap) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $jContent;
+  align-items: $aItems;
+  flex-wrap: $wrap
+}

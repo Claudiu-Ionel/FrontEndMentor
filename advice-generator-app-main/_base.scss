@@ -1,0 +1,18 @@
+$light-cyan: hsl(193, 38%, 86%);
+$neon-green: hsl(150, 100%, 66%);
+$red-neon: hsl(0, 100%, 60%);
+$grayish-blue: hsl(217, 19%, 38%);
+$dark-grayish-blue: hsl(217, 19%, 24%);
+$dark-blue: hsl(218, 23%, 16%);
+
+$font-family: 'Manrope', sans-serif;
+$quote-size: 28px;
+$font-weight: 800;
+
+@mixin flex-container($direction, $jContent, $aItems, $wrap) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $jContent;
+  align-items: $aItems;
+  flex-wrap: $wrap
+}

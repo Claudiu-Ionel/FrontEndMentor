@@ -1,0 +1,149 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: hsl(216, 12%, 8%);
+  width: 100vw;
+  height: 100vh;
+  font-family: "Overpass", sans-serif;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 25px;
+  font-size: 12px;
+}
+
+.display-none {
+  display: none;
+}
+
+.align-center {
+  align-items: center;
+  text-align: center;
+}
+
+.rating-component-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 412px;
+  height: 360px;
+  background: radial-gradient(98.96% 98.96% at 50% 0%, #232A34 0%, #181E27 100%);
+  color: hsl(0, 0%, 100%);
+  padding: 25px;
+  border-radius: 20px;
+}
+.rating-component-wrapper .image-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background: hsl(213, 19%, 18%);
+  margin-bottom: 15px;
+}
+.rating-component-wrapper .image-wrapper.submit-phase {
+  width: 144px;
+  height: 96px;
+}
+.rating-component-wrapper .main-header {
+  font-size: 2em;
+  margin-bottom: 5px;
+}
+.rating-component-wrapper .info {
+  color: hsl(217, 12%, 63%);
+  line-height: 22px;
+  font-size: 15px;
+}
+.rating-component-wrapper .rating-buttons {
+  border: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 20px 0px;
+}
+.rating-component-wrapper .rating-buttons.display-none {
+  display: none;
+}
+.rating-component-wrapper .rating-buttons .radio-wrapper {
+  width: 42px;
+  height: 42px;
+}
+.rating-component-wrapper .rating-buttons .radio-wrapper input[type=radio] {
+  position: relative;
+  appearance: none;
+  width: 100%;
+  height: 100%;
+  background-color: hsl(213, 19%, 18%);
+  border-radius: 50%;
+  cursor: pointer;
+}
+.rating-component-wrapper .rating-buttons .radio-wrapper input[type=radio]:hover {
+  background-color: hsl(216, 12%, 54%);
+}
+.rating-component-wrapper .rating-buttons .radio-wrapper input[type=radio]:hover:before {
+  color: hsl(0, 0%, 100%);
+}
+.rating-component-wrapper .rating-buttons .radio-wrapper input[type=radio]:before {
+  content: attr(data-index);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: hsl(216, 12%, 54%);
+}
+.rating-component-wrapper .rating-buttons .radio-wrapper input[type=radio]:checked {
+  background-color: hsl(25, 97%, 53%);
+}
+.rating-component-wrapper .rating-buttons .radio-wrapper input[type=radio]:checked:before {
+  color: hsl(0, 0%, 100%);
+}
+.rating-component-wrapper .submit-button {
+  width: 100%;
+  height: 45px;
+  justify-self: center;
+  align-items: center;
+  border: none;
+  border-radius: 30px;
+  background-color: hsl(25, 97%, 53%);
+  color: hsl(0, 0%, 100%);
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+}
+.rating-component-wrapper .submit-button:hover {
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(25, 97%, 53%);
+}
+.rating-component-wrapper .user-rating {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  color: hsl(25, 97%, 53%);
+  font-size: 14px;
+  border-radius: 20px;
+  background-color: hsl(213, 19%, 18%);
+  padding: 10px 15px;
+  width: fit-content;
+}
+.rating-component-wrapper .user-rating.display-none {
+  display: none;
+}
+
+/*# sourceMappingURL=index.css.map */
