@@ -1,2 +1,82 @@
 @import './base/reset';
 
+.main {
+  width: 100%;
+  height: 100%;
+  padding: 25px 20px;
+}
+#header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+#theme-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 90px;
+    font-family: inherit;
+  p {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+}
+
+#input-search {
+  width: 100%;
+  position: relative;
+  margin-bottom: 20px;
+  img {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    z-index: 2;
+    transform: translateY(-50%);
+  }
+  input {
+    width: 100%;
+    padding: 20px 45px;
+    border-radius: 12px;
+    border: none;
+    font-family: inherit;
+  }
+  #search-button {
+    position: absolute;
+    font-family: inherit;
+    cursor: pointer;
+    top: 50%;
+    right: 8px;
+    z-index: 2;
+    transform: translateY(-50%);
+    padding: 14px 15px;
+    border-radius: 10px;
+    border: none;
+    color: #fff;
+    font-weight: 800;
+  }
+}
+#git-hub-user {
+  width: 100%;
+  height: 80%;
+  border-radius: 10px;
+  padding: 30px 20px;
+  font-family: inherit;
+  .user-details {
+    display: flex;
+    justify-content: space-around;
+    div {
+      width: 30%;
+      height: auto;
+      border-radius: 50%;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    .user-info {
+      width: 60%;
+    }
+  }
+}
