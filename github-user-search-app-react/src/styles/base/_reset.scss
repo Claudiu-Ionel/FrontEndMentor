@@ -4,16 +4,48 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Space Mono', monospace;
 }
-
+h1 {
+  font-size: 26px;
+  font-weight: 700;
+}
+h2 {
+  font-size: 26px;
+  font-weight: 700;
+}
+h3 {
+  font-size: 16px;
+  font-weight: 700;
+}
+h4 {
+  font-size: 13px;
+  font-weight: 400;
+}
+p {
+  font-size: 15px;
+  line-height: 25px;
+  font-weight: 400;
+}
+.color-blue {
+  color : $primary-color;
+}
+.not-available {
+  color: $Greyish-Blue;
+  fill: $Greyish-Blue;
+}
+.input-error:focus-visible {
+  outline: 1px solid red;
+}
 .light {
   width: 100%;
   height: 100%;
-  .main {
+  .main, .git-hub-data {
       background-color: $main-background-light;
     }
   .text-primary {
     color: $text-light-primary;
+    fill: $text-light-primary;
   }
   .text-secondary {
     color: $text-light-secondary;
@@ -21,33 +53,34 @@
   .background {
     background-color: $background-light;
   }
-    #search-button {
-      background-color: $primary-color;
-    }
-        input::placeholder {
-          color: $text-light-primary
-        }
+  #search-button {
+    background-color: $primary-color;
+  }
+  input::placeholder {
+    color: $text-light-primary
+  }
 }
 .dark {
   width: 100%;
   height: 100%;
-  .main {
+  .main, .git-hub-data {
     background-color: $main-background-dark;
   }
-    .text-primary {
-      color: $text-dark-primary;
-    }
+  .text-primary {
+    color: $text-dark-primary;
+    fill: $text-dark-primary;
+  }
   
-    .text-secondary {
-      color: $text-dark-primary;
-    }
+  .text-secondary {
+    color: $text-dark-primary;
+  }
   .background {
     background-color: $background-dark;
   }
-    #search-button {
-      background-color: $primary-color;
-    }
-    input::placeholder {
-      color: $text-dark-primary
-    }
+  #search-button {
+    background-color: $primary-color;
+  }
+  input::placeholder {
+    color: $text-dark-primary
+  }
 }
