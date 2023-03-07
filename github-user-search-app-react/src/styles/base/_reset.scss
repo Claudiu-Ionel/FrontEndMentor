@@ -50,6 +50,9 @@ p {
 .input-error:focus-visible {
   outline: 1px solid red;
 }
+.api-error {
+  color: red;
+}
 .light {
   width: 100%;
   height: 100%;

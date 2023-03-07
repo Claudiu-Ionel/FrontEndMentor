@@ -44,6 +44,12 @@
     border-radius: 12px;
     border: none;
   }
+  .api-error {
+    top: 50%;
+    right: 100px;
+    position: absolute;
+    transform: translateY(-50%);
+  }
   #search-button {
     position: absolute;
     cursor: pointer;
