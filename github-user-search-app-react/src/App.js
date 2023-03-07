@@ -10,7 +10,7 @@ function App() {
 
   return (
     <div className={`${theme}`}>
-      <div className=' main'>
+      <div id='main'>
         <ThemeSwitcher />
         <InputSearch />
         <GitHubUser />

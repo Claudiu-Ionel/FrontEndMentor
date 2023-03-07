@@ -4,6 +4,7 @@ export const ThemeContext = createContext({ theme: 'light', undefined });
 
 export const ThemeProvider = ({ children }) => {
   async function getGitHubProfile(user) {
+    if (!user) return;
     try {
       const gitHubApiCall = await fetch(`https://api.github.com/users/${user}`);
       const data = await gitHubApiCall.json();
@@ -46,7 +47,7 @@ export const ThemeProvider = ({ children }) => {
     blog: '',
     twitter: '',
   });
-  console.log(userData);
+
   return (
     <ThemeContext.Provider value={{ theme, setTheme, userData, setUserData, getGitHubProfile }}>
       {children}

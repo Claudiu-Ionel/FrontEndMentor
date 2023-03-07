@@ -30,6 +30,19 @@ p {
 .color-blue {
   color : $primary-color;
 }
+
+@mixin responsive($breakpoint) {
+  @if $breakpoint ==desktop {
+    @media only screen and (min-width: 1024px) {
+      @content
+    }
+  };
+  @if $breakpoint ==ipad {
+    @media only screen and (min-width: 768px) {
+      @content
+    }
+  };
+}
 .not-available {
   color: $Greyish-Blue;
   fill: $Greyish-Blue;
@@ -40,7 +53,7 @@ p {
 .light {
   width: 100%;
   height: 100%;
-  .main, .git-hub-data {
+  #main, .git-hub-data {
       background-color: $main-background-light;
     }
   .text-primary {
@@ -63,7 +76,7 @@ p {
 .dark {
   width: 100%;
   height: 100%;
-  .main, .git-hub-data {
+  #main, .git-hub-data {
     background-color: $main-background-dark;
   }
   .text-primary {
