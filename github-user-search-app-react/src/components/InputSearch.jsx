@@ -32,7 +32,10 @@ const InputSearch = () => {
       ></input>
       {apiError && <span className="api-error">No results</span>}
       <button
-        onClick={() => getGitHubProfile(inputValue.replace(' ', '-'))}
+        onClick={() => {
+          getGitHubProfile(inputValue.replace(' ', '-'));
+          setInputValue('');
+        }}
         id="search-button"
         type="button"
       >
